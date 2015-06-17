@@ -4,3 +4,4 @@
 <h2>Attending? <%= @rsvp.attending %></h2>
 <h2>Vegetarian? <%= @rsvp.vegetarian %></h2>
 <h2>Number of Guests: <%= @rsvp.guests %></h2>
+<%= link_to "Delete RSVP", "/rsvps/#{@rsvp.id}", method: :delete %>

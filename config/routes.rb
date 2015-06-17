@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/rsvps/:id' => 'rsvps#show', as: :rsvp
   get 'rsvps/:id/edit' => 'rsvps#edit'
   patch 'rsvps/:id' => 'rsvps#update'
-  delete 'rsvps:id' => 'rsvps#destroy'
+  delete 'rsvps/:id' => 'rsvps#destroy'
   # resources :rsvps
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -22,8 +22,13 @@ class RsvpsController < ApplicationController
   end
 
   def update
-    rsvp = Rsvp.find(params[:id])
+    rsvp = Rsvp.find_by(id: params[:id])
     rsvp.update(params[:rsvp])
+    redirect_to "/rsvps"
+  end
+
+  def destroy
+    Rsvp.find_by(id: params[:id]).destroy
     redirect_to "/rsvps"
   end
 
