@@ -1,6 +1,6 @@
 <h1>Are you coming to my wedding? Please fill out the form below regardless.</h1>
 
-<%= form_for :rsvp do |f|%>
+<%= form_for @rsvp do |f|%>
   <%= f.label :first_name %>
   <%= f.text_field :first_name %>
   <br>
@@ -16,4 +16,6 @@
   <%= f.label :guests %>
   <%= f.text_field :guests %>
   <br>
+
+  <%= f.submit %>
 <% end %>

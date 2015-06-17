@@ -1,0 +1,5 @@
+  <h1>RSVPs</h1>
+  <% @rsvps.each do |rsvp| %>
+    <%= link_to rsvp.full_name, "rsvps/#{rsvp.id}" %>
+    <br>
+  <% end %>
