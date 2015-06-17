@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   get '/rsvps' => 'rsvps#index'
   post '/rsvps' => 'rsvps#create'
   get '/rsvps/new' => 'rsvps#new'
-  get '/rsvps/:id' => 'rsvps#show'
+  get '/rsvps/:id' => 'rsvps#show', as: :rsvp
   get 'rsvps/:id/edit' => 'rsvps#edit'
   patch 'rsvps/:id' => 'rsvps#update'
   delete 'rsvps:id' => 'rsvps#destroy'
+  # resources :rsvps
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
